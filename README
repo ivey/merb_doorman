@@ -1,6 +1,9 @@
 merb_doorman
 ============
 
+*** Want to contribute?  Some of the code isn't spec'd yet. ***
+
+
 Merb plugin that provides an allow/deny DSL for controlling access
 
 
@@ -18,7 +21,7 @@ deny {|c| c.params["arbitrary"] == "expressions"}
 # mostly closed:
 deny :all                           # removes implicit final allow :all
 allow :host => "*.example.com"
-allow :time => "8am-5pm"
+allow :time => "8am-5pm" # not implemented yet
 
 # store a block for repeated usage
 Merb::Access.add_block :admin, {|c| c.current_user.admin?}
